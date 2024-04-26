@@ -1,0 +1,35 @@
+/*
+    Name:   Magnus Drolshagen
+    Klasse: E2FS1
+    Datum:  22.04.2024
+*/
+
+html {
+    font-family: Calibri;
+   }
+   h1 {
+    color: #333333;;
+    font-weight: 600d;
+    font-size: 50px;
+   }
+   .icon{
+    text-align: center;
+    width: 80px;
+   }
+   .text {
+    font-weight: 600;
+    font-size: 19px;
+
+   }
+
+   meter {
+	 width: 500px;
+	height: 25px;
+	
+   }
+   .hidden{
+    visibility: hidden;
+   }
+   .visible{
+    visibility: visible;
+   }

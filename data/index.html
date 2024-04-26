@@ -1,0 +1,185 @@
+<!--
+	Name: 	Magnus Drolshagen
+	Klasse: E2FS1
+	Datum: 	22.04.2024
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Arbeitsplatzsicherheit</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+	<script>
+		setInterval(loadDoc, 1000);
+		function loadDoc() {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function () {
+				if (this.readyState == 4 && this.status == 200) {
+					document.body.innerHTML =
+						this.responseText
+				}
+			};
+			xhttp.open("GET", "/", true);
+			xhttp.send();
+		}
+	</script>
+</head>
+
+<body>
+	<h1 align="center">Arbeitsplatzsicherheit</h1>
+
+	<p class="text">Gef&uuml;hlte Temperatur: <u>%HINDEX% &deg;C</u></p>
+
+
+
+	<table>
+		<tr>
+			<td>
+
+			</td>
+
+			<td>
+				Minimum
+			</td>
+			<td align="center">
+				Wert
+			</td>
+			<td>
+				Maximum
+			</td>
+			<td>
+
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<label></label>
+			</td>
+			<td></td>
+			<td align="center">
+				%LUX% lx
+			</td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr>
+			<td>
+				<label>Helligkeit des Umfeldes</label>
+			</td>
+			<td align="right">
+				500
+			</td>
+			<td>
+				<meter id="lux" value="%LUX%" high="749" low="748" optimum="500" min="499" max="750"></meter>
+			</td>
+			<td>
+				750
+			</td>
+			<td style="text-align:  center;">
+				<img class="%ICONHELL%" src="warning.png" height="20">
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<label></label>
+			</td>
+			<td></td>
+			<td align="center">
+				%TEMP% &deg;C
+			</td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr>
+			<td>
+				<label>Raumtemperatur</label>
+			</td>
+			<td align="right">
+				22
+			</td>
+			<td>
+				<meter id="temp" value="%TEMP%" high="23.99" low="23.98" optimum="22.1" min="22" max="24"></meter>
+			</td>
+			<td>
+				24
+			</td>
+			<td style="text-align:  center;">
+				<img class="%ICONTEMP%" src="warning.png" height="20">
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<label></label>
+			</td>
+			<td></td>
+			<td align="center">
+				%HUMIDITY% &#37;
+			</td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr>
+			<td>
+				<label>Luftfeuchtigkeit</label>
+			</td>
+			<td align="right">
+				40 &#37;
+			</td>
+			<td>
+				<meter id="humidity" value="%HUMIDITY%" high="59.99" low="59.98" optimum="40.1" min="40"
+					max="60"></meter>
+			</td>
+			<td>
+				60 &#37;
+			</td>
+			<td style="text-align:  center;">
+				<img class="%ICONHUMID%" src="warning.png" height="20">
+			</td>
+		</tr>
+
+
+		<tr>
+			<td>
+				<label></label>
+			</td>
+			<td></td>
+			<td align="center">
+				%DISTANCE% cm
+			</td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr>
+			<td>
+				<label>Distanz</label>
+			</td>
+			<td align="right">
+				45 cm
+			</td>
+			<td>
+				<meter id="distance" value="%DISTANCE%" high="79.99" low="79.98" optimum="45.1" min="45"
+					max="80"></meter>
+			</td>
+			<td>
+				80 cm
+			</td>
+			<td style="text-align:  center;">
+				<img class="%ICONDIST%" src="warning.png" height="20">
+			</td>
+		</tr>
+
+		<br>
+
+</body>
+
+</html>
