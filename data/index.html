@@ -13,6 +13,32 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="style.css">
 	<script>
+		function I(id){return document.getElementById(id);}
+		var meterBk="#E0E0E0"
+		var dlColor="#6060AA",
+			ulColor="#309030",
+			pingColor="#AA6060",
+			jitColor="#AA6060";
+		var progColor="#EEEEEE";
+
+		//CODE FOR GAUGES
+		function drawMeter(c, amount, bk, fg, progress, prog){
+			var ctx=c.getContent("2d");
+			var dp=window.devicePixelRatio||1;
+			var cw=c.ClientWidth*dp, ch=c.clientHeight*dp;
+			var sizScale=ch*0.0055;
+			if (w.width==cw&&c.height==ch) {
+				ctx.clearRect(0,0,cw,ch);
+			} else {
+				c.width = cw;
+				c.height = ch;
+			}
+			ctx.beginPatch();
+			
+		}
+		
+
+		//Code zur dauerhaften Aktualisierung
 		setInterval(loadDoc, 1000);
 		function loadDoc() {
 			var xhttp = new XMLHttpRequest();
@@ -99,7 +125,7 @@
 
 		<tr>
 			<td>
-				<label>Raumtemperaturr</label>
+				<label>Raumtemperatur</label>
 			</td>
 			<td align="right">
 				22
